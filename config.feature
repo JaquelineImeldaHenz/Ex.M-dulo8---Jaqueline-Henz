@@ -5,21 +5,21 @@ Como cliente da EBAC - SHOP
 Quero configurar meu produto de acordo com meu tamanho, gosto e quantidade
 Para depois inserir no carrinho
 
-Contexto: dado que acesse um produto da EBAC - SHOP
+Cenário: Configurar e adicionar produto ao carrinho
+Dado que sou um cliente da EBAC-SHOP
+Quando acesso a página de um produto
+E seleciono a cor "<cor>", tamanho "<tamanho>" e quantidade "<quantidade>" desejados
+E clico no botão "Adicionar ao Carrinho"
+Então o produto é adicionado ao carrinho
 
-Cenário: Produto configurado corretamente
-Quando eu adicionar meu produto totalmente configurado
-Então meu produto deve ser adicionado diratamente ao carrinho
+Exemplos:
+| cor      | tamanho | quantidade |
+| vermelho | M       | 1          |
+| azul     | G       | 2          |
 
-Cenário: Produto não conta com seleção de cor, tamanho ou quantidade
-Quando eu adicionar meu produto sem a seleção de cor, tamanho ou quantidade
-Então deve exibir uma mensagem de erro "Produto incompleto"
+Cenário: Limpar seleções
+Dado que sou um cliente da EBAC-SHOP
+E já configurei as opções de cor, tamanho e quantidade de um produto
+Quando clico no botão "Limpar"
+Então as seleções voltam ao estado original
 
-Cenário: Produto conta com mais de 10 itens
-Quando eu adicionar meu produto com quantidade maior 10
-Então deve exibir uma mensagem de erro "Quantidade de itens inválida"
-
-Cenário: Funcionalidade do botão limpar
-Quando eu concluir a configuração do produto
-E clicar no botão "limpar"
-Então as configurações devem voltar ao estado original
