@@ -8,8 +8,8 @@ Para depois inserir no carrinho
 Cenário: Configurar e adicionar produto ao carrinho
 Dado que sou um cliente da EBAC-SHOP
 Quando acesso a página de um produto
-E seleciono a cor "<cor>", tamanho "<tamanho>" e quantidade "<quantidade>" desejados
-E clico no botão "Adicionar ao Carrinho"
+E seleciono a <cor>, <tamanho> e <quantidade> desejados
+E clique no botão "Adicionar ao Carrinho"
 Então o produto é adicionado ao carrinho
 
 Exemplos:
